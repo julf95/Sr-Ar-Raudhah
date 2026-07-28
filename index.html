@@ -79,15 +79,52 @@ Membina Generasi Rabbani
 <nav class="hidden md:flex gap-6 text-sm">
 
 <a href="#about">Tentang</a>
-<a href="#kurikulum">Kurikulum</a>
-<a href="#program">Program</a>
-<a href="#gallery">Galeri</a>
+<a href="#kurikulum">Silibus</a>
+<a href="#program">Kebitaraan</a>
+<a href="#gallery">Media</a>
 <a href="#contact">Hubungi</a>
 
 </nav>
 
+<!-- Hamburger Button Mobile -->
+
+<button 
+onclick="toggleMenu()"
+class="md:hidden text-purple-800 text-3xl">
+
+☰
+
+</button>
 
 
+<!-- Mobile Menu -->
+
+<div id="mobileMenu"
+class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow px-6 py-5">
+
+
+<a href="#about" class="block py-2">
+Tentang
+</a>
+
+<a href="#kurikulum" class="block py-2">
+Silibus
+</a>
+
+<a href="#program" class="block py-2">
+Kebitaraan
+</a>
+
+<a href="#gallery" class="block py-2">
+Media
+</a>
+
+<a href="#contact" class="block py-2">
+Hubungi
+</a>
+
+
+</div>
 
 
 </div>
@@ -99,7 +136,7 @@ Membina Generasi Rabbani
 
 <!-- HERO -->
 
-<section class="hero-pattern min-h-screen flex items-center text-white pt-24">
+<section class="hero-pattern min-h-screen flex items-center text-white pt-24 pb-20">
 
 
 <div class="max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
@@ -537,6 +574,24 @@ WhatsApp Sekolah
 
 </footer>
 
+<script>
+
+function toggleMenu(){
+
+const menu = document.getElementById("mobileMenu");
+
+menu.classList.toggle("hidden");
+
+}
+
+
+document.querySelectorAll("#mobileMenu a").forEach(link=>{
+ link.onclick=()=>{
+  document.getElementById("mobileMenu").classList.add("hidden");
+ }
+});
+
+</script>
 
 
 </body>
